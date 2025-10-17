@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="newtodo.css">
+</head>
+<body>
+
+  <!-- Menu -->
+  <label>
+    <input type="checkbox">
+    <div class="toggle">
+      <span class="top_line common"></span>
+      <span class="middle_line common"></span>
+      <span class="bottom_line common"></span>
+    </div>
+    <div class="slide">
+      <h1>MENU</h1>
+      <ul>
+        <li><a href="pages/Dashboard.html" target="_blank"><i class="fas fa-tv"></i>Dashboard</a></li>
+        <li><a href="pages/profile.html" target="_blank"><i class="far fa-user"></i>Profile</a></li>
+        <!-- <li><a href="#"><i class="fab fa-gripfire"></i>Trending</a></li>
+        <li><a href="#"><i class="fas fa-comments"></i>Messages</a></li>
+        <li><a href="#"><i class="fas fa-folder"></i>File Manager</a></li> -->
+        <li><a href="pages/portfolio.html" target="_blank"><i class="fas fa-address-book"></i>Portfolio</a></li>
+        <li><a href="#"><i class="fas fa-heart"></i>Saved</a></li>
+        <li><a href="#"><i class="fas fa-cogs"></i>Settings</a></li>
+      </ul>
+    </div>
+  </label>
+
+  <!-- Main container -->
+  <div class="main-container">
+    <h1>My To-Do List</h1>
+
+    <div class="input">
+      <input type="text" placeholder="Enter task..." id="inp-text">
+      <input type="time" id="inp-time">
+      <button id="inp-btn">Add Task</button>
+    </div>
+
+    <div class="mp1"></div>
+  </div>
+
+  <script src="newtodo.js"></script>
+</body>
+</html>

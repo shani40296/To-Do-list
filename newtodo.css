@@ -1,0 +1,218 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f2f2f2;
+  text-align: center; /* Center heading and main content */
+  overflow-x: hidden;
+}
+
+/* ================== */
+/* MENU STYLES */
+/* ================== */
+
+/* Hide the real checkbox */
+label input[type="checkbox"] {
+  display: none;
+}
+
+/* Toggle button */
+.toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 101;
+}
+
+/* Toggle lines */
+.toggle .common {
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background-color: #8000ff;
+  border-radius: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.toggle .top_line {
+  top: 8px;
+}
+.toggle .middle_line {
+  top: 16px;
+}
+.toggle .bottom_line {
+  top: 24px;
+}
+
+/* Toggle animation when checked */
+input:checked ~ .toggle .top_line {
+  top: 16px;
+  transform: translateX(-50%) rotate(45deg);
+}
+input:checked ~ .toggle .middle_line {
+  opacity: 0;
+}
+input:checked ~ .toggle .bottom_line {
+  top: 16px;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Slide Menu */
+.slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  background-color: #fff;
+  transform: translateX(-200px);
+  transition: 0.5s ease;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  padding-top: 60px; /* Space for toggle button */
+}
+
+/* Slide menu visible when checked */
+input:checked ~ .slide {
+  transform: translateX(0);
+}
+
+/* Menu content */
+.slide h1 {
+  color: #8000ff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.slide ul {
+  list-style: none;
+  padding: 0;
+}
+.slide ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #011a41;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+.slide ul li a i {
+  width: 30px;
+}
+.slide ul li a:hover {
+  background-color: #8000ff;
+  color: #fff;
+}
+
+/* ================== */
+/* TO-DO LIST STYLES */
+/* ================== */
+
+.main-container {
+  margin: 60px auto 30px auto;
+  padding: 20px;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* Heading */
+.main-container h1 {
+  text-align: center;
+  color: #8000ff;
+  margin-bottom: 20px;
+}
+
+/* Input section */
+.input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+#inp-text, #inp-time {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#inp-btn {
+  padding: 6px 12px;
+  background-color: #8000ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#inp-btn:hover {
+  background-color: #5500aa;
+}
+
+/* Task items */
+.mp1 p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+/* Checkbox */
+.checkbox-btn {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Task buttons */
+.btn-group button {
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+.btn-group i {
+  color: #8000ff;
+  font-size: 16px;
+}
+.btn-group i:hover {
+  color: red; /* Delete hover color */
+}
+.edit-btn i:hover {
+  color: green; /* Edit hover color */
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .main-container {
+    width: 90%;
+    margin-top: 80px;
+  }
+  .slide {
+    width: 160px;
+  }
+  #inp-text, #inp-time, #inp-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+
